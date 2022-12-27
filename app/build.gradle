@@ -6,6 +6,10 @@ android {
     namespace 'com.example.java_linear_test_template'
     compileSdk 32
 
+    aaptOptions {
+        noCompress "tflite"
+    }
+
     defaultConfig {
         applicationId "com.example.java_linear_test_template"
         minSdk 23
@@ -52,4 +56,8 @@ dependencies {
     implementation "androidx.camera:camera-view:${camerax_version}"
     // If you want to additionally use the CameraX Extensions library
     implementation "androidx.camera:camera-extensions:${camerax_version}"
+
+    // Use this dependency to bundle the pipeline with your app
+    implementation 'com.google.mlkit:image-labeling-custom:17.0.1'
+
 }

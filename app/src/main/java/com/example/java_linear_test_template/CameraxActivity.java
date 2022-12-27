@@ -18,12 +18,15 @@ public class CameraxActivity extends AppCompatActivity {
 
     private ImageView imageView;
 
+    private TextView textView1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_camerax);
 
         imageView = findViewById(R.id.imageView);
+        textView1 = findViewById(R.id.logText1);
 
         findViewById(R.id.btnStart).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,9 +40,9 @@ public class CameraxActivity extends AppCompatActivity {
     private void runTestMachine() {
         machine = new Machine();
 
-        machine.add(new CameraxAnalysisOutput(this, 1));
+        machine.add(new CameraxAnalysisOutput(this, 2));
         // ↓ change next count when next module over 1 　　　　　　　　 ↑
-        machine.add(new ImageProxyToBitmap());
+        machine.add(new ImageProxyToBitmap(),);
 
         machine.add(new ShowBitmapToImageView(this, imageView));
 
