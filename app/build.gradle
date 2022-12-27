@@ -59,5 +59,7 @@ dependencies {
 
     // Use this dependency to bundle the pipeline with your app
     implementation 'com.google.mlkit:image-labeling-custom:17.0.1'
+    // Object detection & tracking feature with custom bundled model
+    implementation 'com.google.mlkit:object-detection-custom:17.0.0'
 
 }

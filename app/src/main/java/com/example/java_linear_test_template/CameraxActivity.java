@@ -9,7 +9,9 @@ import android.widget.TextView;
 
 import com.example.java_linear_test_template.linear_test.feauture.AccNumberOutput;
 import com.example.java_linear_test_template.linear_test.feauture.mlkit.LabelListToString;
+import com.example.java_linear_test_template.linear_test.feauture.mlkit.MLKitCustomObjDetector;
 import com.example.java_linear_test_template.linear_test.feauture.mlkit.MLKitLabeling;
+import com.example.java_linear_test_template.linear_test.feauture.mlkit.ObjListToString;
 import com.example.java_linear_test_template.linear_test.platform.LinearWrapper;
 import com.example.java_linear_test_template.linear_test.platform.Machine;
 import com.example.java_linear_test_template.linear_test.util.LogStringToTextView;
@@ -46,14 +48,14 @@ public class CameraxActivity extends AppCompatActivity {
         machine.add(new CameraxAnalysisOutput(this, 2));
         // ↓ change next count when next module over 1 　　　　　　　　 ↑
         machine.add(
-                new MLKitLabeling(),
+                new MLKitCustomObjDetector(),
                 new LinearWrapper(
                         new ImageProxyToBitmap(),
                         new ShowBitmapToImageView(this, imageView)
                 )
         );
 
-        machine.add(new LabelListToString());
+        machine.add(new ObjListToString());
         machine.add(new LogStringToTextView(textView1));
 
         machine.run();
