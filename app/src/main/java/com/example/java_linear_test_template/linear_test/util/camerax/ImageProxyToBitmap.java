@@ -31,9 +31,8 @@ public class ImageProxyToBitmap extends TFilter<MCImageProxy, Bitmap> {
         final Matrix m2 = new Matrix();
         m2.setScale(-2,2);
 
-        final Bitmap afterBmp = Bitmap.createBitmap(
+        return Bitmap.createBitmap(
                 Bitmap.createBitmap(beforeBmp, 0, 0, w, h, m, false),
                                                 0,0, h, w, m2, false);
-        return afterBmp;
     }
 }
