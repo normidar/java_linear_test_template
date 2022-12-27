@@ -47,7 +47,7 @@ public class PermissionsActivity extends AppCompatActivity {
         // write you code here
 
 //        Example:
-//        Intent intent = new Intent(this, CameraxActivity.class);
-//        startActivity(intent);
+        Intent intent = new Intent(this, CameraxActivity.class);
+        startActivity(intent);
     }
 }
