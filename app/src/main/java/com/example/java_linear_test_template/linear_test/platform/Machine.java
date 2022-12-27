@@ -1,5 +1,6 @@
 package com.example.java_linear_test_template.linear_test.platform;
 
+import android.annotation.SuppressLint;
 import android.util.Log;
 
 import java.util.ArrayList;
@@ -19,6 +20,7 @@ public class Machine {
         elements.add(elementList);
     }
 
+    @SuppressLint("NewApi")
     public void add(TModule... module) {
         assert module.length != 0;
         elements.add(Arrays.stream(module).collect(Collectors.toList()));
@@ -53,6 +55,7 @@ public class Machine {
     }
 
 
+    @SuppressLint("NewApi")
     private void setListener(OutputAble outputAble, InputAble inputAble) {
         outputAble.addListener(new Function() {
             @Override
