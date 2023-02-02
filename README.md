@@ -3,9 +3,13 @@
 main is a simplest linear test (output a acc number to TextView)
 
 
-### branch relationship
+## branch relationship
 
-main -> permisstions_launcher -> camerax_linear_test -> mlkit_labeling_custom_model
+main -> permisstions_launcher -> camerax_linear_test
+
+### From CameraXLinearTest
+
+ -> mlkit_custom_model
 
 
 ### How to rebase the branch?
